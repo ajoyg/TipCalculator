@@ -35,9 +35,9 @@ class ViewController: UIViewController {
     @IBAction func onEditChanged1(sender: AnyObject) {
         //print("User Edited bill")
         var tipPercentages = [0.15, 0.2, 0.25]
-        var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
+        let tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
         
-        var billAmount = NSString(string: billField.text!).doubleValue
+        let billAmount = NSString(string: billField.text!).doubleValue
         //print(billAmount)
         let tip = billAmount * tipPercentage
         let total = billAmount + tip
